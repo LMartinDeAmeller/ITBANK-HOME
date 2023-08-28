@@ -6,8 +6,8 @@
 --light-hover-color: #937234;
 --button-hover-color: #d8aa56;
 --white-color: #eeeeee;
---bgr-color: #626364;
---bgl-color: #393e46;
+--bg-right-color: #626364;
+--bg-left-color: #393e46;
 }
 
 html {
@@ -217,7 +217,7 @@ label{
 }
 
 .transfer_form{
-    background: linear-gradient(45deg,var(--bgl-color),var(--bgr-color));
+    background: linear-gradient(45deg,var(--bg-left-color),var(--bg-right-color));
     width: auto;
 }
 
