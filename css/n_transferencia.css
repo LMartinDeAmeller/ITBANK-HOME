@@ -218,6 +218,7 @@ label{
 
 .transfer_form{
     background: linear-gradient(45deg,var(--bgl-color),var(--bgr-color));
+    width: auto;
 }
 
 .transfer_table tr{
@@ -230,6 +231,7 @@ label{
     outline: none;
     border-bottom:1px solid white;
     color:var(--light-color);
+    width: 100%;
 }
 
 #inpt_concepto{

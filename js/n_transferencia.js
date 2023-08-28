@@ -1,4 +1,7 @@
 document.addEventListener('DOMContentLoaded', function() {
+    //variables
+    var search1 = false;
+    
     //evento busqueda
 
     var searchButton = document.getElementById("inpt_cbu_search_button");
@@ -24,9 +27,12 @@ document.addEventListener('DOMContentLoaded', function() {
             input_alias.value="bee.bank.bank";
             input_cbu.value="0123456789012345678901";
             input_cuil.value="11-11111111-1";
+
+            search1 = true;
         }
         else{
             alert("Usuario/Cuenta inexistente");
+            search1 = false;
         }
     });
     
@@ -36,8 +42,19 @@ document.addEventListener('DOMContentLoaded', function() {
 
     transferButton.addEventListener("click",function(){
         let input_monto = document.getElementById("inpt_monto");
-        let input_alias = document.getElementById("inpt_alias");
-        let input_cbu = document.getElementById("inpt_cbu");
-        let input_check= document.getElementById("inpt_check");
+        let input_checkbox1 = document.getElementById("inpt_check");
+
+        if(search1==false){
+            alert("Asegurese de que haya un CBU/Alias valido");
+        }
+        else if(input_monto.value==""||input_monto.value==" "){
+            alert("Ingrese un monto valido");
+        }
+        else if(input_checkbox1.checked==false){
+            alert("Por favor confirme la transferencia antes de proseguir")
+        }
+        else{
+            alert("Transferencia exitosa!!");
+        }
     });
 });
